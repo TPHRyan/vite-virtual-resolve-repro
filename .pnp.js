@@ -19,14 +19,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "vite-virtual-resolve-repro",
+        "name": "root",
         "reference": "workspace:."
+      },
+      {
+        "name": "vite-virtual-resolve-repro",
+        "reference": "workspace:packages/web"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["vite-virtual-resolve-repro", ["workspace:."]]
+      ["root", ["workspace:."]],
+      ["vite-virtual-resolve-repro", ["workspace:packages/web"]]
     ],
     "fallbackPool": [
     ],
@@ -37,8 +42,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["less", "npm:4.0.0"],
-            ["vite", "npm:2.0.0-beta.12"]
           ],
           "linkType": "SOFT",
         }]
@@ -1064,6 +1067,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["root", [
+        ["workspace:.", {
+          "packageLocation": "./",
+          "packageDependencies": [
+            ["root", "workspace:."]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["safe-buffer", [
         ["npm:5.1.2", {
           "packageLocation": "./.yarn/cache/safe-buffer-npm-5.1.2-c27fedf6c4-2708587c1b.zip/node_modules/safe-buffer/",
@@ -1309,10 +1321,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["vite-virtual-resolve-repro", [
-        ["workspace:.", {
-          "packageLocation": "./",
+        ["workspace:packages/web", {
+          "packageLocation": "./packages/web/",
           "packageDependencies": [
-            ["vite-virtual-resolve-repro", "workspace:."],
+            ["vite-virtual-resolve-repro", "workspace:packages/web"],
             ["less", "npm:4.0.0"],
             ["vite", "npm:2.0.0-beta.12"]
           ],
