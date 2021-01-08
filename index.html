@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+<body>
+  <div id="app">
+    <p>This is a test reproduction for an error.</p>
+    <p>When vite is given peer dependencies in .yarnrc.yml so they may be imported, it is unable to resolve a virtual package file. (<pre>fs.promises.readFile</pre> run using yarn node works fine.)</p>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
