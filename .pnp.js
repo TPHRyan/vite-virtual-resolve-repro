@@ -1310,12 +1310,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:2.0.0-beta.12", {
           "packageLocation": "./.yarn/cache/vite-npm-2.0.0-beta.12-f7a75d780e-d963463856.zip/node_modules/vite/",
           "packageDependencies": [
-            ["vite", "npm:2.0.0-beta.12"],
+            ["vite", "npm:2.0.0-beta.12"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:61aca4d3c86be1c0ae480e2a2ac06c57ae2af0a8698a70bf04335e6b22f352e4704621c83f7a6b3015a41445492d4a3eead5aa0eb0a744662134f95608aade86#npm:2.0.0-beta.12", {
+          "packageLocation": "./.yarn/$$virtual/vite-virtual-f091c56ee5/0/cache/vite-npm-2.0.0-beta.12-f7a75d780e-d963463856.zip/node_modules/vite/",
+          "packageDependencies": [
+            ["vite", "virtual:61aca4d3c86be1c0ae480e2a2ac06c57ae2af0a8698a70bf04335e6b22f352e4704621c83f7a6b3015a41445492d4a3eead5aa0eb0a744662134f95608aade86#npm:2.0.0-beta.12"],
+            ["@types/less", null],
             ["esbuild", "npm:0.8.31"],
             ["fsevents", "patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"],
+            ["less", "npm:4.0.0"],
             ["postcss", "npm:8.2.3"],
             ["resolve", "patch:resolve@npm%3A1.19.0#builtin<compat/resolve>::version=1.19.0&hash=3388aa"],
             ["rollup", "npm:2.36.1"]
+          ],
+          "packagePeers": [
+            "@types/less",
+            "less"
           ],
           "linkType": "HARD",
         }]
@@ -1326,7 +1339,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["vite-virtual-resolve-repro", "workspace:packages/web"],
             ["less", "npm:4.0.0"],
-            ["vite", "npm:2.0.0-beta.12"]
+            ["vite", "virtual:61aca4d3c86be1c0ae480e2a2ac06c57ae2af0a8698a70bf04335e6b22f352e4704621c83f7a6b3015a41445492d4a3eead5aa0eb0a744662134f95608aade86#npm:2.0.0-beta.12"]
           ],
           "linkType": "SOFT",
         }]
